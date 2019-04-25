@@ -1,0 +1,12 @@
+[user]
+	email = jacob.cunningham@live.com
+	name = Jacob Cunningham
+
+[alias]
+  a = "add ."
+  c = commit
+  p = push
+  s = status -sb
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  nah = !"bash -c 'git reset --hard && git clean -df'"
+  master = checkout master

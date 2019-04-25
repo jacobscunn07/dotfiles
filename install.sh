@@ -1,0 +1,1 @@
+ln -sfv "$PWD/git/.gitconfig" ~
