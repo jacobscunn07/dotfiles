@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# Nuke image(s)
-
-docker image rm $(docker image ls -a -q)
