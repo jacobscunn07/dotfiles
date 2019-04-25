@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Nuke container(s)
+
+docker container rm $(docker container ls -a -q)

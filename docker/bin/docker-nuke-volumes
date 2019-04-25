@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Nuke volume(s)
+
+docker volume rm $(docker volume ls -q)

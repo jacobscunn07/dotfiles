@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Nuke network(s)
+
+docker network rm $(docker network ls -q)
