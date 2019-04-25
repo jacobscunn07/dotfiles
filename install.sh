@@ -1,10 +1,17 @@
-ln -sfv "$PWD/git/.gitconfig" ~
-ln -sfv "$PWD/git/.gitignore" ~
-ln -sfv "$PWD/bash/.bash_aliases" ~
-ln -sfv "$PWD/bash/.bash_profile" ~
-ln -sfv "$PWD/docker/.docker_aliases" ~
+YELLOW='\033[1;33m'
+NC='\033[0m'
 
-# validate ~/bin exists
-# Copy git/bin into ~/bin
-# chmod +x the files
-# Add ~/bin to $PATH
+info () {
+    printf "${YELLOW}$1${NC}\n"
+}
+
+install_dotfiles () {
+  info 'Installing dotfiles.'
+
+  for src in $(find $PWD -name '.*' -type f)
+  do
+     ln -sfv $src ~
+  done
+}
+
+install_dotfiles
