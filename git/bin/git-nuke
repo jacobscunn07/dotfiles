@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# Remove everything not in source
-
-git clean -xdf
