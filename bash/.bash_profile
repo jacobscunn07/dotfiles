@@ -6,6 +6,10 @@ if [ -f ~/.docker_aliases ]; then
     . ~/.docker_aliases
 fi
 
+if [ -f ~/.docker-compose_aliases ]; then
+    . ~/.docker-compose_aliases
+fi
+
 if [ -f ~/.kubectl_aliases ]; then
     . ~/.kubectl_aliases
 fi

@@ -1,0 +1,12 @@
+#!/bin/sh
+# ------------------------------------
+# Docker Compose aliases
+# ------------------------------------
+
+alias dc="docker-compose"
+alias dcup="docker-compose up"
+alias dcdown="docker-compose down"
+alias dcrun="docker-compose run"
+
+
+dcalias() { alias | grep 'docker-compose' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
