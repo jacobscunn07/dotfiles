@@ -31,5 +31,23 @@ install_commands () {
   done
 }
 
+install_homebrew () {
+  which -s brew
+  if [[ $? != 0 ]] ; then
+    info 'Installing Homebrew.'
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    info 'Updating Homebrew.'
+    brew update
+  fi
+}
+
+install_software () {
+  info 'Installing software.'
+  brew bundle
+}
+
+install_homebrew
+install_software
 install_dotfiles
 install_commands
