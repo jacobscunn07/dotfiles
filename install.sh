@@ -10,7 +10,7 @@ install_dotfiles () {
 
   for src in $(find $PWD -name '.*' -type f)
   do
-     ln -sfv $src ~
+     ln -sf $src ~
   done
 }
 
