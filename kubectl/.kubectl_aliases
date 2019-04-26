@@ -1,0 +1,12 @@
+#!/bin/sh
+# ------------------------------------
+# kubectl aliases
+# ------------------------------------
+
+alias kcc="kubectl config get-contexts"
+alias kccc="kubectl config current-context"
+
+kcapply() {
+    # Given a list of filenames, apply them
+}
+kcalias() { alias | grep 'kubectl' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
