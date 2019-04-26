@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# List available contexts
-
-kubectl config get-contexts
