@@ -6,7 +6,11 @@ if [ -f ~/.docker_aliases ]; then
     . ~/.docker_aliases
 fi
 
-# will probably need to validate bin folder exists
+if [ -f ~/.kubectl_aliases ]; then
+    . ~/.kubectl_aliases
+fi
 
+# will probably need to validate bin folder exists
+export CODE=$HOME/_CODE
 export PATH=$PATH:/Users/jacobcunningham/bin
 # export PATH=$PATH:$HOME/bin

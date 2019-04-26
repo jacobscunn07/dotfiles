@@ -7,6 +7,16 @@ alias kcc="kubectl config get-contexts"
 alias kccc="kubectl config current-context"
 
 kcapply() {
-    # Given a list of filenames, apply them
+  if [ $# -eq 0 ]
+  then
+    echo "You should supply some arguments."
+  else
+    CMD="kubectl apply"
+    for i; do 
+      CMD+=" -f $i"
+     done
+
+    eval $CMD
+  fi
 }
 kcalias() { alias | grep 'kubectl' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
